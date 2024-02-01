@@ -11,12 +11,12 @@ const app = express()
 mongoose.connect('mongodb://root:1234@monguito:27017/miapp?authSource=admin')
 
 app.get('/', async (_req, res) => {
-  console.log('listando...')
+  console.log('listando chanchito...')
   const animales = await Animal.find();
   return res.send(animales)
 })
 app.get('/crear', async (_req, res) => {
-  console.log('creando...')
+  console.log('creando chanchos...')
   await Animal.create({ tipo: 'Chanchito', estado: 'Feliz' })
   return res.send('ok')
 })
